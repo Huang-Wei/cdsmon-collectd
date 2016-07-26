@@ -25,5 +25,7 @@ RUN cd /usr/bin \
   && ln -sf python2.7-config python-config \
   && ln -sf pip2.7 pip
 
+COPY exec_sample.py /tmp
+
 # since we will be "always" mounting the volume, we can set this up
-CMD python
+CMD python # <-- TODO replace this to a forever-running collectd daemon process
